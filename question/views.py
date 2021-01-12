@@ -106,12 +106,6 @@ def Question2View(request):
                      r1.save()
                      return HttpResponse('first booking of this slot')
 
-            # if (len(listname)<=2):
-            # if name not in (qw):
-            #
-            #     return HttpResponse('booked')
-            # else:
-            #     return HttpResponse('already booked')
 
 
         elif '_cancel' in request.POST:
@@ -174,12 +168,7 @@ class Question3View(APIView):
             pts = point1.objects.all().count()
             if(pts<4):
                 return Response({'message':'alteast four entries are required'})
-            # elif(pts==4):
-            #     pt1=point1.objects.get(id=1)
-            #     pt2=point1.objects.get(id=2)
-            #     pt3=point1.objects.get(id=3)
-            #     pt4=point1.objects.get(id=4)
-            #     return Response({'x1':'yt'})
+
             else:
                 last_four = point1.objects.all().order_by('-id')[:4]
                 last_four_in_ascending_order = reversed(last_four)

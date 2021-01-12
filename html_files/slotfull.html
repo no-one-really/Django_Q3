@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>the slots are full. Cancel to book a slot</p>
-    {% for result in slots   %}
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <p>the slots are full. Cancel to book a slot</p>
+  {% for result in slots   %}
   <p>
 
-      {{ result.slot }}:{{ result.name }}</p>
-{% endfor %}
-  </body>
+    {{ result.slot }}:{{ result.name }}</p>
+  {% endfor %}
+</body>
+
 </html>
